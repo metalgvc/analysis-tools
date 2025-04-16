@@ -1,3 +1,9 @@
+# Scripts:
+- [pcap.sh - PCAP Analysis & Export Toolkit](#pcapsh--pcap-analysis--export-toolkit)
+- [magicnum.sh - data type by file magic number](#magicnumsh---data-type-by-file-magic-number)
+
+---
+
 # `pcap.sh` – PCAP Analysis & Export Toolkit
 
 A lightweight Bash script for quick analysis and export of `.pcap` files using `tshark`. Supports device discovery, protocol analysis, DNS/HTTP extraction, and more.
@@ -65,4 +71,19 @@ A lightweight Bash script for quick analysis and export of `.pcap` files using `
 ```bash
 ./pcap.sh analyze traffic.pcap devices -a
 ./pcap.sh export traffic.pcap httpstreams -o output/
+```
+---
+
+# `magicnum.sh` - data type by file magic number
+A simple script to identify file types based on their magic numbers. It uses the `file` command to determine the type of a file and compares it with a list of known magic numbers.
+
+#### Usage
+```bash
+./magicnum.sh <magic number>
+```
+
+#### Example
+```bash
+./magicnum.sh "ffd8ffe0"
+JPEG image data
 ```
